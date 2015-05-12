@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Yarne Decuyper">
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<title>Artic Monkeys</title>
+	<style>
+    body {
+      margin: 0;
+      font-family: 'Open-Sans', sans-serif;
+      background-color: #F0F0F0;
+    }
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+    header {
+      background: black;
+      width: auto;
+      height: 44px;
+    }
+    #cssmenu {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    #cssmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      display: block;
+      zoom: 1;
+    }
+    #cssmenu ul:after {
+      content: " ";
+      display: block;
+      font-size: 0;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    #cssmenu ul li {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    #cssmenu.align-right ul li {
+      float: right;
+    }
+    #cssmenu.align-center ul {
+      text-align: center;
+    }
+    #cssmenu ul li a {
+      color: grey;
+      text-decoration: none;
+      display: block;
+      padding: 15px 25px;
+      font-family: 'Open-Sans', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      position: relative;
+      -webkit-transition: color .25s;
+      -moz-transition: color .25s;
+      -ms-transition: color .25s;
+      -o-transition: color .25s;
+      transition: color .25s;
+    }
+    #cssmenu ul li a:hover {
+      color: lightgray;
+    }
+    #cssmenu ul li a:hover:before {
+      width: 100%;
+    }
+    #cssmenu ul li a:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -3px;
+      top: 19px;
+      height: 6px;
+      width: 6px;
+      background: grey;
+      opacity: .5;
+    }
+    #cssmenu ul li a:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background: grey;
+      -webkit-transition: width .25s;
+      -moz-transition: width .25s;
+      -ms-transition: width .25s;
+      -o-transition: width .25s;
+      transition: width .25s;
+    }
+    #cssmenu ul li#last > a:after,
+    #cssmenu ul li:last-child > a:after {
+      display: none;
+    }
+    #cssmenu ul li.active a {
+      color: lightgray;
+    }
+    #cssmenu ul li.active a:before {
+      width: 100%;
+    }
+
+    footer {
+      color: lightgray;
+      background:black;
+      position:absolute;
+      bottom:0;
+      left:0;
+      margin: 0;
+      width: 100%;
+    }
+    footer #tekst {
+      padding: 10px 0;
+      margin: 0 auto;
+      width: 1000px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .content {
+      width: 1000px;
+      margin: 100px auto;
+    }
+    .content .info {
+      background-color: #656565;
+      padding: 10px;
+      margin-bottom: 50px;
+    }
+    .content .games {
+      height: 350px;
+      background-color: dimgray;
+    }
+    .content .games .picture {
+      width: 199px;
+      border-left: 1px solid black;
+      float : left;
+    }
+    .content .games .lastpicture {
+      width: 200px;
+      float : left;
+    }
+	</style>
+</head>
+	
+<body>
+	<!-- NAVIGATION -->
+	<header>
+		<div id="cssmenu">
+			<ul>
+				 <li class="active"><a href="#"><span>Home</span></a></li>
+				 <li><a href="#"><span>Games</span></a></li>
+				 <li id="last"><a href="#"><span>Contacteer ons</span></a></li>
+			</ul>
+		</div>
+  </header>
+  <div class="content">
+    <div class="info">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus tempus in nisi a maximus. Vestibulum ut malesuada purus. 
+      Pellentesque porta placerat facilisis. Quisque molestie egestas libero vel facilisis. 
+      Aenean ut tincidunt ipsum. Vestibulum pretium lacus non libero pellentesque dignissim. 
+      Donec eu feugiat tortor. Mauris congue urna ut leo tempus, quis tempus nisi bibendum. 
+      Cras finibus id odio ut tincidunt. Suspendisse tincidunt mauris vel est imperdiet blandit.
+    </div>
+    <div class="games">
+      <div class="picture">a</div>
+      <div class="picture">a</div>
+      <div class="picture">a</div>
+      <div class="picture">a</div>
+      <div class="lastpicture">a</div>
+    </div>
+  </div>
+  <footer>
+      <div id="tekst">Made by &copy; Yarne Decuyper</div>
+  </footer>
+</body>
+	
+</html>
