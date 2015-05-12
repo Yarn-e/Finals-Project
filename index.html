@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Yarne Decuyper">
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<title>Artic Monkeys</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+		#cssmenu {
+			background: black;
+			width: auto;
+		}
+		#cssmenu ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+			display: block;
+			zoom: 1;
+		}
+		#cssmenu ul:after {
+			content: " ";
+			display: block;
+			font-size: 0;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		#cssmenu ul li {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		#cssmenu.align-right ul li {
+			float: right;
+		}
+		#cssmenu.align-center ul {
+			text-align: center;
+		}
+		#cssmenu ul li a {
+			color: grey;
+			text-decoration: none;
+			display: block;
+			padding: 15px 25px;
+			font-family: 'Open-Sans', sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 14px;
+			position: relative;
+			-webkit-transition: color .25s;
+			-moz-transition: color .25s;
+			-ms-transition: color .25s;
+			-o-transition: color .25s;
+			transition: color .25s;
+		}
+		#cssmenu ul li a:hover {
+			color: lightgray;
+		}
+		#cssmenu ul li a:hover:before {
+			width: 100%;
+		}
+		#cssmenu ul li a:after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: -3px;
+			top: 19px;
+			height: 6px;
+			width: 6px;
+			background: grey;
+			opacity: .5;
+		}
+		#cssmenu ul li a:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 3px;
+			width: 0;
+			background: grey;
+			-webkit-transition: width .25s;
+			-moz-transition: width .25s;
+			-ms-transition: width .25s;
+			-o-transition: width .25s;
+			transition: width .25s;
+		}
+		#cssmenu ul li#last > a:after,
+		#cssmenu ul li:last-child > a:after {
+			display: none;
+		}
+		#cssmenu ul li#first {
+			margin-left: 100px;
+		}
+		#cssmenu ul li.active a {
+			color: lightgray;
+		}
+		#cssmenu ul li.active a:before {
+			width: 100%;
+		}
+	</style>
+</head>
+	
+<body class="front">
+	<!-- NAVIGATION -->
+	<header>
+		<div id="cssmenu">
+			<ul>
+				 <li class="active" id="first"><a href="#"><span>Home</span></a></li>
+				 <li><a href="#"><span>Products</span></a></li>
+				 <li><a href="#"><span>Company</span></a></li>
+				 <li id="last"><a href="#"><span>Contact</span></a></li>
+			</ul>
+		</div>
+  </header>
+</body>
+	
+</html>
