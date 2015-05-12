@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Open-Sans', sans-serif;
+  background-color: #F0F0F0;
+}
+
+header {
+  background: black;
+  width: auto;
+  height: 44px;
+}
+
+#cssmenu,
+section.Games,
+#tekst {
+  margin: 0 auto;
+  width: 960px;
+}
+
+
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li a {
+  color: grey;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover {
+  color: lightgray;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+}
+#cssmenu ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: grey;
+  opacity: .5;
+}
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: grey;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+#cssmenu ul li#last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.active a {
+  color: lightgray;
+}
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+
+footer {
+  color: lightgray;
+  background:black;
+  position:absolute;
+  bottom:0;
+  left:0;
+  margin: 0;
+  width: 100%;
+}
+footer #tekst {
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.Game {
+  float: left;
+  height: 200px;
+  width: 300px;
+  background-color: #ccc;
+  position: relative;
+  margin: 20px 10px;
+  box-sizing: border-box;
+}
+.GameFirst {
+ 
+}
+.Game .overlay {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, .3);
+}
+.Game .title {
+  height: 40px;
+}
+.Game .description {
+  height: 160px;
+  display: none;
+}
+.Game .title, 
+.Game .description {
+  width: 300px;
+}
