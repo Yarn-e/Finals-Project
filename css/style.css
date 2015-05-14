@@ -1,22 +1,53 @@
-body {
+/* SHARED CSS **********************************************************************************/
+* {
   margin: 0;
+}
+html, body {
+  height: 100%;
+}
+#page-wrapper {
+  min-height: 100%;
+  margin-bottom: -35px; 
+}
+#page-wrapper:after {
+  content: "";
+  display: block;
+}
+footer.tekst, 
+#page-wrapper:after {
+  height: 35px; 
+}
+
+body {
   font-family: 'Open-Sans', sans-serif;
-  background-color: #F0F0F0;
+  background-color: #F1EDE5;
 }
 
 header {
-  background: black;
+  background: #BF0105;
   width: auto;
   height: 44px;
 }
 
+h1, h2, h3 {
+  margin: 0;
+  padding: 5px;
+}
+
+footer {
+  color: #FFF;
+  background:#BF0105;
+}
+
 #cssmenu,
-section.Games,
+.content-wrapper,
 #tekst {
   margin: 0 auto;
   width: 960px;
 }
 
+
+/* NAVIGATION CSS **********************************************************************************/
 
 #cssmenu ul {
   list-style: none;
@@ -26,6 +57,7 @@ section.Games,
   display: block;
   zoom: 1;
 }
+
 #cssmenu ul:after {
   content: " ";
   display: block;
@@ -34,24 +66,27 @@ section.Games,
   clear: both;
   visibility: hidden;
 }
+
 #cssmenu ul li {
   display: inline-block;
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 #cssmenu.align-right ul li {
   float: right;
 }
+
 #cssmenu.align-center ul {
   text-align: center;
 }
+
 #cssmenu ul li a {
-  color: grey;
+  color: #FFF;
   text-decoration: none;
   display: block;
   padding: 15px 25px;
-  font-family: 'Open-Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
@@ -62,12 +97,15 @@ section.Games,
   -o-transition: color .25s;
   transition: color .25s;
 }
+
 #cssmenu ul li a:hover {
-  color: lightgray;
+  color: #A8A6A8;
 }
+
 #cssmenu ul li a:hover:before {
   width: 100%;
 }
+
 #cssmenu ul li a:after {
   content: "";
   display: block;
@@ -76,9 +114,10 @@ section.Games,
   top: 19px;
   height: 6px;
   width: 6px;
-  background: grey;
+  background: #A8A6A8;
   opacity: .5;
 }
+
 #cssmenu ul li a:before {
   content: "";
   display: block;
@@ -87,34 +126,29 @@ section.Games,
   bottom: 0;
   height: 3px;
   width: 0;
-  background: grey;
+  background: #A8A6A8;
   -webkit-transition: width .25s;
   -moz-transition: width .25s;
   -ms-transition: width .25s;
   -o-transition: width .25s;
   transition: width .25s;
 }
+
 #cssmenu ul li#last > a:after,
 #cssmenu ul li:last-child > a:after {
   display: none;
 }
+
 #cssmenu ul li.active a {
-  color: lightgray;
+  color: #A8A6A8;
 }
+
 #cssmenu ul li.active a:before {
   width: 100%;
 }
 
-footer {
-  color: lightgray;
-  background:black;
-  position:absolute;
-  bottom:0;
-  left:0;
-  margin: 0;
-  width: 100%;
-}
-footer #tekst {
+/* INDEX CSS **********************************************************************************/
+#tekst {
   padding: 10px 0;
   font-weight: 700;
   font-size: 14px;
@@ -129,25 +163,99 @@ footer #tekst {
   margin: 20px 10px;
   box-sizing: border-box;
 }
+
 .Game:hover {
   cursor: pointer;
 }
-.GameFirst {
- 
-}
+
 .Game .overlay {
   position: absolute;
   bottom: 0;
-  background-color: rgba(255, 0, 0, .3);
+  background-color: rgba(62, 60, 62, .5);
+  color: #FFF;
 }
+
 .Game .title {
   height: 40px;
+  width: 300px;
 }
+
 .Game .description {
   height: 160px;
   display: none;
+  color: lightgray;
 }
+
 .Game .title, 
 .Game .description {
-  width: 300px;
+  font-family: 'Segoe UI Light', 'Open-Sans', sans-serif;
+}
+
+.Games .link-more a:link,
+.Games .link-more a:visited {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+
+.Games .link-more {
+  width: 960px;
+  border-top: 5px solid rgba(208,208,208,.5);
+  float: left;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.Games .link-more a:hover,
+.Games .link-more a:active {
+  color: #A8A6A8;
+}
+
+.Games h1 {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-bottom: 5px solid rgba(208,208,208,.5);
+}
+
+.Games .title h3 {
+  border-left: 3px solid #BF0105;
+  margin-left: 5px;
+}
+
+.Games .description {
+  padding: 5px;
+  width: 290px;
+  height: 150px;
+}
+
+/* GAMES CSS **********************************************************************************/
+
+.GameDetail .content,
+.GameDetail .sideinfo {
+  float: left;
+}
+
+.GameDetail .content {
+  width: 630px;
+  margin: 10px;
+  background-color: rgba(62, 60, 62, .7);
+}
+
+.GameDetail .content p {
+  padding: 5px;
+}
+
+.GameDetail .sideinfo {
+  width: 290px;
+  margin: 10px;
+  background-color: rgba(62, 60, 62, .7);
+}
+
+.GameDetail {
+  padding-top: 20px;
 }

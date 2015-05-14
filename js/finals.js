@@ -1,8 +1,6 @@
 
 $(document).ready(function() {
   
-  console.log('test 123');
-  
   $('.Game').hover(
     function() {
       $(this).find('.description').slideDown();
@@ -11,6 +9,9 @@ $(document).ready(function() {
       $(this).find('.description').slideUp();
     }
   );
-  
+  $('.next').click(
+    function() {
+      $(this).show("slide", { direction: "left" }, 1000);
+    }
+  );
 });
-                  
