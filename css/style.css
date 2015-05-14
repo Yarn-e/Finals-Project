@@ -1,4 +1,5 @@
-/* SHARED CSS **********************************************************************************/
+
+/* Page Structure *************************************************************/
 * {
   margin: 0;
 }
@@ -13,20 +14,47 @@ html, body {
   content: "";
   display: block;
 }
-footer.tekst, 
-#page-wrapper:after {
+#page-wrapper:after,
+footer {
   height: 35px; 
-}
-
-body {
-  font-family: 'Open-Sans', sans-serif;
-  background-color: #F1EDE5;
 }
 
 header {
   background: #BF0105;
-  width: auto;
   height: 44px;
+}
+footer {
+  color: #FFF;
+  background:#BF0105;
+}
+
+.centered {
+  margin: 0 auto;
+  width: 960px;
+}
+
+
+/* Clearfix helper ************************************************************/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+
+/* Typography *****************************************************************/
+body {
+  font-family: 'Open-Sans', sans-serif;
+  background-color: #F1EDE5;
 }
 
 h1, h2, h3 {
@@ -34,21 +62,9 @@ h1, h2, h3 {
   padding: 5px;
 }
 
-footer {
-  color: #FFF;
-  background:#BF0105;
-}
-
-#cssmenu,
-.content-wrapper,
-#tekst {
-  margin: 0 auto;
-  width: 960px;
-}
 
 
 /* NAVIGATION CSS **********************************************************************************/
-
 #cssmenu ul {
   list-style: none;
   margin: 0;
@@ -57,32 +73,13 @@ footer {
   display: block;
   zoom: 1;
 }
-
-#cssmenu ul:after {
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-#cssmenu ul li {
+#cssmenu li {
   display: inline-block;
   padding: 0;
   margin: 0;
   list-style: none;
 }
-
-#cssmenu.align-right ul li {
-  float: right;
-}
-
-#cssmenu.align-center ul {
-  text-align: center;
-}
-
-#cssmenu ul li a {
+#cssmenu a {
   color: #FFF;
   text-decoration: none;
   display: block;
@@ -97,16 +94,13 @@ footer {
   -o-transition: color .25s;
   transition: color .25s;
 }
-
-#cssmenu ul li a:hover {
+#cssmenu a:hover {
   color: #A8A6A8;
 }
-
-#cssmenu ul li a:hover:before {
+#cssmenu a:hover:before {
   width: 100%;
 }
-
-#cssmenu ul li a:after {
+#cssmenu a:after {
   content: "";
   display: block;
   position: absolute;
@@ -117,8 +111,7 @@ footer {
   background: #A8A6A8;
   opacity: .5;
 }
-
-#cssmenu ul li a:before {
+#cssmenu a:before {
   content: "";
   display: block;
   position: absolute;
@@ -138,59 +131,23 @@ footer {
 #cssmenu ul li:last-child > a:after {
   display: none;
 }
-
 #cssmenu ul li.active a {
   color: #A8A6A8;
 }
-
 #cssmenu ul li.active a:before {
   width: 100%;
 }
 
-/* INDEX CSS **********************************************************************************/
-#tekst {
-  padding: 10px 0;
+
+/* GENERAL CSS ****************************************************************/
+.footer-content {
+  line-height: 35px;
   font-weight: 700;
   font-size: 14px;
 }
 
-.Game {
-  float: left;
-  height: 200px;
-  width: 300px;
-  background-color: #ccc;
-  position: relative;
-  margin: 20px 10px;
-  box-sizing: border-box;
-}
 
-.Game:hover {
-  cursor: pointer;
-}
-
-.Game .overlay {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(62, 60, 62, .5);
-  color: #FFF;
-}
-
-.Game .title {
-  height: 40px;
-  width: 300px;
-}
-
-.Game .description {
-  height: 160px;
-  display: none;
-  color: lightgray;
-}
-
-.Game .title, 
-.Game .description {
-  font-family: 'Segoe UI Light', 'Open-Sans', sans-serif;
-}
-
+/* Games overview *************************************************************/
 .Games .link-more a:link,
 .Games .link-more a:visited {
   color: black;
@@ -222,28 +179,81 @@ footer {
   border-bottom: 5px solid rgba(208,208,208,.5);
 }
 
-.Games .title h3 {
+
+
+
+.Game * {
+  box-sizing: border-box;
+}
+.Game {
+  float: left;
+  height: 200px;
+  width: 300px;
+  background-color: #ccc;
+  position: relative;
+  margin: 20px 10px;
+  box-sizing: border-box;
+}
+
+.Game:hover {
+  cursor: pointer;
+}
+
+.Game .overlay {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(62, 60, 62, .5);
+  color: #FFF;
+}
+
+.Game .title {
+  height: 40px;
+  width: 300px;
+}
+.Game .title h3 {
   border-left: 3px solid #BF0105;
   margin-left: 5px;
 }
-
-.Games .description {
+.Game .description {
+  height: 160px;
+  display: none;
+  color: lightgray;
   padding: 5px;
-  width: 290px;
-  height: 150px;
+}
+.Game .title,
+.Game .description {
+  font-family: 'Segoe UI Light', 'Open-Sans', sans-serif;
 }
 
-/* GAMES CSS **********************************************************************************/
 
+/* Game Detail ****************************************************************/
+.GameDetail {
+  background-color: #CCC;
+  margin: 20px 0;
+}
+.GameDetail * {
+  box-sizing: border-box;
+}
+.GameDetail .image {
+  border-bottom: 4px solid #BF0105;
+  line-height: 0;
+}
 .GameDetail .content,
 .GameDetail .sideinfo {
   float: left;
 }
+.GameDetail .content,
+.GameDetail .sideinfo,
+.GameDetail h1 {
+  margin: 10px;
+}
 
+.GameDetail h1 {
+  color: #BF0105;
+}
 .GameDetail .content {
   width: 630px;
-  margin: 10px;
-  background-color: rgba(62, 60, 62, .7);
+  padding-right: 60px;
 }
 
 .GameDetail .content p {
@@ -252,10 +262,49 @@ footer {
 
 .GameDetail .sideinfo {
   width: 290px;
-  margin: 10px;
-  background-color: rgba(62, 60, 62, .7);
 }
 
-.GameDetail {
-  padding-top: 20px;
+.block {
+  margin-bottom: 2em;
+}
+.block h3 {
+  color: #666;
+  padding: 0 0 1em 0;
+}
+.game-info dt,
+.game-info dd {
+  margin-bottom: 1em;
+}
+.game-info dt {
+  width: 80px;
+  float: left;
+  color: #666;
+}
+.game-info dd {
+  float-right: clear;
+  margin-left: 80px;
+}
+
+.game-languages {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+}
+.game-languages th,
+.game-languages td {
+  padding: 2px;
+  text-align: left;
+}
+.game-languages th {
+  border-bottom: 3px solid #BF0105;
+}
+.game-languages td {
+  border-bottom: 1px solid #666;
+}
+
+.game-languages .fa-check {
+  color: darkgreen;
+}
+.game-languages .fa-times {
+  color: #666;
 }
