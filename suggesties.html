@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+	
+<head>
+	<title>WWII Games</title>
+  
+  <meta charset="UTF-8">
+	<meta name="author" content="Yarne Decuyper">
+  
+	<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  
+  <script src="./js/jquery-2.1.4.min.js"></script>
+  <script src="./js/finals.js"></script>
+	
+</head>
+	
+<body onload="Load()">
+  <div id="page-wrapper">
+
+    <header>
+      <div id="cssmenu" class="centered">
+        <ul>
+           <li><a href="./index.html"><span>Home</span></a></li>
+           <li><a href="./games.html"><span>Games</span></a></li>
+           <li><a href="./over.html"><span>Over deze site</span></a></li>
+           <li class="active" id="last"><a href="./suggesties.html"><span>Suggesties</span></a></li>
+        </ul>
+      </div>
+    </header>
+  
+
+    <div class="content-wrapper clearfix centered">
+
+      <section class="Form">
+        
+        <div class="clearfix">
+          <form action="mailto:zoomsxl@gmail.com">
+            <h2>Game Toevoegen</h2>
+            <fieldset>
+              <legend>Gegevens</legend>
+              <p>
+                <label for="Naam">Naam van de game</label>
+                <input type="text" class="long" id="Naam" name="Naam" placeholder="Naam vd. game" required>	
+              </p>
+              <p>
+                <label for="Uitgever">Uitgever</label>	
+                <input type="text" class="long" id="Uitgever" name="Uitgever" placeholder="Naam vd. Uitgever" required>
+              </p>
+              <p>
+                <label for="Ontwikkelaar">Ontwikkelaar</label>
+                <input type="text" class="long" id="Ontwikkelaar" name="Ontwikkelaar" placeholder="Naam vd. Ontwikkelaar" required>
+              </p>
+              <p>
+                <label>Jaar</label>
+                <select id="IDjaar"></select>
+              </p>
+              <p>
+                <label for="Single">Singleplayer</label>
+                <input type="checkbox" id="Single" name="Single">
+              </p>
+              <p>
+                <label for="Multi">Multiplayer</label>
+                <input type="checkbox" id="Multi" name="Multi">
+              </p>
+            </fieldset>
+            <p class="cent">
+              <input class="button button-primary" type="submit" value="Verzenden"> &nbsp; &nbsp;
+              <input class="button" type="reset" value="Reseten">
+            </p>
+          </form>
+          <h2>Prijschecker</h2>
+          <fieldset class="prijs">
+            <table>
+              <thead>
+                <tr>
+                  <th>Games</th>
+                  <th>Eenheidsprijs</th>
+                  <th>Aantal</th>
+                  <th>Totale prijs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Wolfenstein 3D</td>
+                  <th>4.99</th>
+                  <td><input type="text" class="short" id="Wolf3D" value="0"></td>
+                  <td><input type="text" class="short" id="W3Dprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Return to castle Wolfenstein</td>
+                  <th>9.99</th>
+                  <td><input type="text" class="short" id="ReturnWolf" value="0"></td>
+                  <td><input type="text" class="short" id="RWprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Wolfenstein: Enemy Territory</td>
+                  <th>Gratis</th>
+                  <td><input type="text" class="short" id="WolfET" value="0"></td>
+                  <td><input type="text" class="short" id="WETprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Wolfenstein</td>
+                  <th>53.95</th>
+                  <td><input type="text" class="short" id="Wolf" value="0"></td>
+                  <td><input type="text" class="short" id="Wprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Wolfenstein : The New Order</td>
+                  <th>40.99</th>
+                  <td><input type="text" class="short" id="WolfNewOrder" value="0"></td>
+                  <td><input type="text" class="short" id="WNOprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Sniper Elite</td>
+                  <th>9.99</th>
+                  <td><input type="text" class="short" id="SE" value="0"></td>
+                  <td><input type="text" class="short" id="SEprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Sniper Elite V2</td>
+                  <th>27.99</th>
+                  <td><input type="text" class="short" id="SEV2" value="0"></td>
+                  <td><input type="text" class="short" id="SEV2prijs" readonly></td>
+                </tr><tr>
+                  <td>Sniper Elite 3</td>
+                  <th>45.99</th>
+                  <td><input type="text" class="short" id="SE3" value="0"></td>
+                  <td><input type="text" class="short" id="SE3prijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Call of Duty</td>
+                  <th>19.99</th>
+                  <td><input type="text" class="short" id="COD" value="0"></td>
+                  <td><input type="text" class="short" id="CODprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Call of Duty 2</td>
+                  <th>19.99</th>
+                  <td><input type="text" class="short" id="COD2" value="0"></td>
+                  <td><input type="text" class="short" id="COD2prijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Call of Duty 3</td>
+                  <th>32.95</th>
+                  <td><input type="text" class="short" id="COD3" value="0"></td>
+                  <td><input type="text" class="short" id="COD3prijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Call of Duty : Roads to Victory</td>
+                  <th>29.07</th>
+                  <td><input type="text" class="short" id="CODRtV" value="0"></td>
+                  <td><input type="text" class="short" id="CODRtVprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Call of Duty : World at War</td>
+                  <th>24.99</th>
+                  <td><input type="text" class="short" id="CODWaW" value="0"></td>
+                  <td><input type="text" class="short" id="CODWaWprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>Heroes &amp; Generals</td>
+                  <th>Gratis</th>
+                  <td><input type="text" class="short" id="HG" value="0"></td>
+                  <td><input type="text" class="short" id="HGprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>War Thunder</td>
+                  <th>Gratis</th>
+                  <td><input type="text" class="short" id="WT" value="0"></td>
+                  <td><input type="text" class="short" id="WTprijs" readonly></td>
+                </tr>
+                <tr>
+                  <td>World of Tanks</td>
+                  <th>Gratis</th>
+                  <td><input type="text" class="short" id="WoT" value="0"></td>
+                  <td><input type="text" class="short" id="WoTprijs" readonly></td>
+                </tr>
+                <tr>
+                  <th colspan="3">Totale prijs</th>
+                  <th><input type="text" class="short" id="Totprijs" readonly></th>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+          <p class="cent">
+              <input type="button" id="btn" class="button" value="Leegmaken">
+            </p>
+        </div>
+      </section>
+
+    </div><!-- content-wrapper -->
+
+  </div><!-- page-wrapper -->
+
+
+  <footer>
+      <div class="footer-content centered">
+        Made by &copy; Yarne Decuyper
+      </div>
+  </footer>
+
+</body>
+	
+</html>

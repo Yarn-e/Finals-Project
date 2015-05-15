@@ -1,3 +1,9 @@
+/* Imports ********************************************************************/
+@font-face {
+	font-family: 'Segoe UI Light';
+	src: url('./font/SEGOEUIL.eot');
+	src: local('SEGOEUIL'), url('./font/SEGOEUIL.woff') format('woff'), url('./font/SEGOEUIL.ttf') format('truetype');
+}
 
 /* Page Structure *************************************************************/
 * {
@@ -26,13 +32,16 @@ header {
 footer {
   color: #FFF;
   background:#BF0105;
+  margin-top: 20px;
 }
 
 .centered {
   margin: 0 auto;
   width: 960px;
 }
-
+.clearboth {
+  clear: both;
+}
 
 /* Clearfix helper ************************************************************/
 .clearfix:after {
@@ -173,13 +182,12 @@ h1, h2, h3 {
   color: #A8A6A8;
 }
 
+.Games h1,
 .Games h1 {
   padding: 10px 0;
   margin: 10px 0;
   border-bottom: 5px solid rgba(208,208,208,.5);
 }
-
-
 
 
 .Game * {
@@ -227,7 +235,8 @@ h1, h2, h3 {
 
 
 /* Game Detail ****************************************************************/
-.GameDetail {
+.GameDetail,
+.Form {
   background-color: #CCC;
   margin: 20px 0;
 }
@@ -244,7 +253,8 @@ h1, h2, h3 {
 }
 .GameDetail .content,
 .GameDetail .sideinfo,
-.GameDetail h1 {
+.GameDetail h1,
+.GameDetail iframe{
   margin: 10px;
 }
 
@@ -256,8 +266,10 @@ h1, h2, h3 {
   padding-right: 60px;
 }
 
-.GameDetail .content p {
+.GameDetail .content p,
+.GameDetail .content li{
   padding: 5px;
+  line-height: 1.2em;
 }
 
 .GameDetail .sideinfo {
@@ -271,18 +283,38 @@ h1, h2, h3 {
   color: #666;
   padding: 0 0 1em 0;
 }
+.block a:link,
+.block a:visited,
+.GameDetail a:link,
+.GameDetail a:visited {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+.block a:hover,
+.block a:active,
+.GameDetail a:hover,
+.GameDetail a:active{
+  color: #666;
+}
 .game-info dt,
 .game-info dd {
   margin-bottom: 1em;
 }
 .game-info dt {
-  width: 80px;
+  width: 110px;
   float: left;
   color: #666;
+  font-weight: bold;
 }
 .game-info dd {
   float-right: clear;
-  margin-left: 80px;
+  margin-left: 110px;
 }
 
 .game-languages {
@@ -302,9 +334,89 @@ h1, h2, h3 {
   border-bottom: 1px solid #666;
 }
 
-.game-languages .fa-check {
+.game-languages .fa-check,
+.game-info .fa-check {
   color: darkgreen;
 }
-.game-languages .fa-times {
+.game-languages .fa-times,
+.game-info .fa-times {
   color: #666;
 }
+
+/* FORM ***********************************************************************/
+
+.Form {
+  padding: 10px;
+}
+
+fieldset p {
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+
+fieldset {
+	width: 700px;
+	margin: 10px auto;
+	color: #222;
+	border: 1px solid black;	
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+legend {
+	margin-left: 20px;
+	font-size: 18px;
+	padding: 0 10px;
+	font-family: 'Roboto Condensed' , sans-serif;
+}
+input.long,
+input.short {
+  line-height: 19px;
+}
+input.long {
+	width: 300px;
+}
+input.short {
+  width: 80px;
+}
+.checkbox {
+  margin-bottom: 10px;
+}
+.button {
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.button-primary {
+	background-color: #999;
+}
+.button:hover {
+	background-color: black;
+	color: white;
+}
+label {
+	position: relative;
+	clear: both;
+	float: left;
+  width: 200px;
+	margin-right: 10px;
+	text-align: right;
+	line-height: 1.3em;
+	color: #666;
+	font-weight: bold;
+}
+.cent{
+	text-align: center;
+}
+
+.prijs td,
+.prijs th {
+  border-collapse: collapse;
+  font-size: 14px;
+  width: 100%;
+  padding: 5px;
+  text-align: left;
+}
+
